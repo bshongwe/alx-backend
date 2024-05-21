@@ -140,6 +140,7 @@ Repo:</br>
 - GitHub repository: `alx-backend`
 - Directory: `0x01-caching`
 - File: `1-fifo_cache.py`
+
 <br><br>
 
 ### Task 2. LIFO Caching
@@ -172,6 +173,7 @@ Repo:</br>
 - GitHub repository: `alx-backend`
 - Directory: `0x01-caching`
 - File: `2-lifo_cache.py`
+
 <br></br>
 
 ### Task 3. LRU Caching
@@ -198,18 +200,17 @@ Create a class `LRUCache` that inherits from `BaseCaching` and is a caching syst
 ```bash
 ./3-main.py
 ```
-<br></br>
+
 
 Repo:</br>
 - GitHub repository: `alx-backend`
 - Directory: `0x01-caching`
 - File: `3-lru_cache.py`
+
 <br></br>
 
-### 4. MRU Caching
-
-Create a class `MRUCache` that inherits from `BaseCaching` and is a caching system:
-
+### Task 4. MRU Caching
+Create a class `MRUCache` that inherits from `BaseCaching` and is a caching system:</br>
 - Use `self.cache_data` - dictionary from the parent class `BaseCaching`
 - Overload `def __init__(self)`: but don’t forget to call the parent init: `super().__init__()`
 - `def put(self, key, item)`:
@@ -222,78 +223,27 @@ Create a class `MRUCache` that inherits from `BaseCaching` and is a caching syst
   - Return the value in `self.cache_data` linked to `key`
   - If key is `None` or if the key doesn’t exist in `self.cache_data`, return `None`
 
+#### Task 4: Edge Test Case
+**File**
 ```python
-#!/usr/bin/python3
-""" 4-main """
-MRUCache = __import__('4-mru_cache').MRUCache
-
-my_cache = MRUCache()
-my_cache.put("A", "Hello")
-my_cache.put("B", "World")
-my_cache.put("C", "Holberton")
-my_cache.put("D", "School")
-my_cache.print_cache()
-my_cache.put("E", "Battery")
-my_cache.print_cache()
-print(my_cache.get("C"))
-my_cache.print_cache()
-my_cache.put("F", "Mission")
-my_cache.print_cache()
-my_cache.put("G", "San Francisco")
-my_cache.print_cache()
-my_cache.put("H", "H")
-my_cache.print_cache()
+4-main.py
 ```
 
+**Test command**
 ```bash
-$ ./4-main.py
-Current cache:
-A: Hello
-B: World
-C: Holberton
-D: School
-DISCARD: D
-Current cache:
-A: Hello
-B: World
-C: Holberton
-E: Battery
-Holberton
-Current cache:
-A: Hello
-B: World
-C: Holberton
-E: Battery
-DISCARD: C
-Current cache:
-A: Hello
-B: World
-E: Battery
-F: Mission
-DISCARD: F
-Current cache:
-A: Hello
-B: World
-E: Battery
-G: San Francisco
-DISCARD: G
-Current cache:
-A: Hello
-B: World
-E: Battery
-H: H
+./4-main.py
 ```
 
-Repo:
 
+Repo:</br>
 - GitHub repository: `alx-backend`
 - Directory: `0x01-caching`
 - File: `4-mru_cache.py`
 
-### 5. LFU Caching
+<br></br>
 
-Create a class `LFUCache` that inherits from `BaseCaching` and is a caching system:
-
+### Task 5 (Advanced). LFU Caching
+Create a class `LFUCache` that inherits from `BaseCaching` and is a caching system:</br>
 - Use `self.cache_data` - dictionary from the parent class `BaseCaching`
 - Overload `def __init__(self)`: but don’t forget to call the parent init: `super().__init__()`
 - `def put(self, key, item)`:
@@ -307,102 +257,19 @@ Create a class `LFUCache` that inherits from `BaseCaching` and is a caching syst
   - Return the value in `self.cache_data` linked to `key`
   - If key is `None` or if the key doesn’t exist in `self.cache_data`, return `None`
 
+#### Task 5 (Advanced): Edge Test Case
+**File**
 ```python
-#!/usr/bin/python3
-""" 5-main """
-LFUCache = __import__('5-lfu_cache').LFUCache
-
-my_cache = LFUCache()
-my_cache.put("A", "Hello")
-my_cache.put("B", "World")
-my_cache.put("C", "Holberton")
-my_cache.put("D", "School")
-my_cache.print_cache()
-my_cache.put("E", "Battery")
-my_cache.print_cache()
-print(my_cache.get("B"))
-my_cache.print_cache()
-my_cache.put("F", "Mission")
-my_cache.print_cache()
-my_cache.put("G", "San Francisco")
-my_cache.print_cache()
-my_cache.put("H", "H")
-my_cache.print_cache()
-print(my_cache.get("F"))
-my_cache.print_cache()
-my_cache.put("I", "I")
-my_cache.print_cache()
-my_cache.put("J", "J")
-my_cache.print_cache()
-my_cache.put("K", "K")
-my_cache.print_cache()
+2-main.py
 ```
 
+**Test command**
 ```bash
-$ ./5-main.py
-Current cache:
-A: Hello
-B: World
-C: Holberton
-D: School
-DISCARD: A
-Current cache:
-B: World
-C: Holberton
-D: School
-E: Battery
-World
-Current cache:
-B: World
-C: Holberton
-D: School
-E: Battery
-DISCARD: C
-Current cache:
-B: World
-D: School
-E: Battery
-F: Mission
-DISCARD: D
-Current cache:
-B: World
-E: Battery
-F: Mission
-G: San Francisco
-DISCARD: G
-Current cache:
-B: World
-E: Battery
-F: Mission
-H: H
-Mission
-Current cache:
-B: World
-E: Battery
-F: Mission
-H: H
-DISCARD: B
-Current cache:
-E: Battery
-F: Mission
-H: H
-I: I
-DISCARD: I
-Current cache:
-E: Battery
-F: Mission
-H: H
-J: J
-DISCARD: J
-Current cache:
-E: Battery
-F: Mission
-H: H
-K: K
+./2-main.py
 ```
 
-Repo:
 
+Repo:</br>
 - GitHub repository: `alx-backend`
 - Directory: `0x01-caching`
 - File: `5-lfu_cache.py`
