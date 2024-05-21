@@ -8,8 +8,7 @@ from base_caching import BaseCaching
 
 
 class FIFOCache(BaseCaching):
-    """
-    Represents object that allows storing and
+    """Represents object that allows storing and
     retrieves items from dictionary with FIFO
     removal mechanism when limit is reached
     """
