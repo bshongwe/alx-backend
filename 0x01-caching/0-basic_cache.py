@@ -1,13 +1,12 @@
 #!/usr/bin/env python3
 """
-Module: Task 1 - Basic caching
+Module: Task 0 - Basic caching
 """
 from base_caching import BaseCaching
 
 
 class BasicCache(BaseCaching):
-    """
-    Represents object that allows storing and
+    """Represents object that allows storing and
     retrieves items from dictionary
     """
 
