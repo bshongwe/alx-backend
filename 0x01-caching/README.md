@@ -140,11 +140,10 @@ Repo:</br>
 - GitHub repository: `alx-backend`
 - Directory: `0x01-caching`
 - File: `1-fifo_cache.py`
+<br><br>
 
-### 2. LIFO Caching
-
-Create a class `LIFOCache` that inherits from `BaseCaching` and is a caching system:
-
+### Task 2. LIFO Caching
+Create a class `LIFOCache` that inherits from `BaseCaching` and is a caching system:</br>
 - Use `self.cache_data` - dictionary from the parent class `BaseCaching`
 - Overload `def __init__(self)`: but don’t forget to call the parent init: `super().__init__()`
 - `def put(self, key, item)`:
@@ -157,71 +156,26 @@ Create a class `LIFOCache` that inherits from `BaseCaching` and is a caching sys
   - Return the value in `self.cache_data` linked to `key`
   - If key is `None` or if the key doesn’t exist in `self.cache_data`, return `None`
 
+#### Task 2: Edge Test Case
+**File**
 ```python
-#!/usr/bin/python3
-""" 2-main """
-LIFOCache = __import__('2-lifo_cache').LIFOCache
-
-my_cache = LIFOCache()
-my_cache.put("A", "Hello")
-my_cache.put("B", "World")
-my_cache.put("C", "Holberton")
-my_cache.put("D", "School")
-my_cache.print_cache()
-my_cache.put("E", "Battery")
-my_cache.print_cache()
-my_cache.put("C", "Street")
-my_cache.print_cache()
-my_cache.put("F", "Mission")
-my_cache.print_cache()
-my_cache.put("G", "San Francisco")
-my_cache.print_cache()
+2-main.py
 ```
 
+**Test command**
 ```bash
-$ ./2-main.py
-Current cache:
-A: Hello
-B: World
-C: Holberton
-D: School
-DISCARD: D
-Current cache:
-
-
-A: Hello
-B: World
-C: Holberton
-E: Battery
-Current cache:
-A: Hello
-B: World
-C: Street
-E: Battery
-DISCARD: E
-Current cache:
-A: Hello
-B: World
-C: Street
-F: Mission
-DISCARD: F
-Current cache:
-A: Hello
-B: World
-C: Street
-G: San Francisco
+./2-main.py
 ```
 
-Repo:
 
+Repo:</br>
 - GitHub repository: `alx-backend`
 - Directory: `0x01-caching`
 - File: `2-lifo_cache.py`
+<br></br>
 
-### 3. LRU Caching
-
-Create a class `LRUCache` that inherits from `BaseCaching` and is a caching system:
-
+### Task 3. LRU Caching
+Create a class `LRUCache` that inherits from `BaseCaching` and is a caching system:</br>
 - Use `self.cache_data` - dictionary from the parent class `BaseCaching`
 - Overload `def __init__(self)`: but don’t forget to call the parent init: `super().__init__()`
 - `def put(self, key, item)`:
@@ -234,67 +188,23 @@ Create a class `LRUCache` that inherits from `BaseCaching` and is a caching syst
   - Return the value in `self.cache_data` linked to `key`
   - If key is `None` or if the key doesn’t exist in `self.cache_data`, return `None`
 
+#### Task 3: Edge Test Case
+**File**
 ```python
-#!/usr/bin/python3
-""" 3-main """
-LRUCache = __import__('3-lru_cache').LRUCache
-
-my_cache = LRUCache()
-my_cache.put("A", "Hello")
-my_cache.put("B", "World")
-my_cache.put("C", "Holberton")
-my_cache.put("D", "School")
-my_cache.print_cache()
-my_cache.put("E", "Battery")
-my_cache.print_cache()
-print(my_cache.get("C"))
-my_cache.put("F", "Mission")
-my_cache.print_cache()
-my_cache.put("G", "San Francisco")
-my_cache.print_cache()
-my_cache.put("H", "H")
-my_cache.print_cache()
+3-main.py
 ```
 
+**Test command**
 ```bash
-$ ./3-main.py
-Current cache:
-A: Hello
-B: World
-C: Holberton
-D: School
-DISCARD: A
-Current cache:
-B: World
-C: Holberton
-D: School
-E: Battery
-Holberton
-DISCARD: B
-Current cache:
-C: Holberton
-D: School
-E: Battery
-F: Mission
-DISCARD: D
-Current cache:
-C: Holberton
-E: Battery
-F: Mission
-G: San Francisco
-DISCARD: C
-Current cache:
-E: Battery
-F: Mission
-G: San Francisco
-H: H
+./3-main.py
 ```
+<br></br>
 
-Repo:
-
+Repo:</br>
 - GitHub repository: `alx-backend`
 - Directory: `0x01-caching`
 - File: `3-lru_cache.py`
+<br></br>
 
 ### 4. MRU Caching
 
