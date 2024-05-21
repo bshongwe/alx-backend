@@ -8,21 +8,18 @@ from base_caching import BaseCaching
 
 
 class LIFOCache(BaseCaching):
-    """
-    Represents object that allows storing and
+    """Represents object that allows storing and
     retrieves items from dictionary with LIFO
     removal mechanism when limit is reached
     """
     def __init__(self):
-        """
-        Initializes cache
+        """Initializes cache
         """
         super().__init__()
         self.cache_data = OrderedDict()
 
     def put(self, key, item):
-        """
-        Adds item in cache
+        """Adds item in cache
         """
         if key is None or item is None:
             return
@@ -34,7 +31,6 @@ class LIFOCache(BaseCaching):
         self.cache_data.move_to_end(key, last=True)
 
     def get(self, key):
-        """
-        Retrieves item by key.
+        """Retrieves item by key
         """
         return self.cache_data.get(key, None)
