@@ -1,7 +1,10 @@
 # 0x03. Queuing System in JS 🚀
 `Back-end` `JavaScript` `ES6` `Redis` `NodeJS` `ExpressJS` `Kue`
 
-Welcome to the `0x03. Queuing System in JS (JavaScript)` project. This `README.md` will guide you through the setup, requirements and tasks involved in building a `Redis` based queuing system using `Node.js`, `Express` and `Kue`. 🛠️
+Welcome to the `0x03. Queuing System in JS (JavaScript)` project. This
+`README.md` will guide you through the setup, requirements and tasks involved
+in building a `Redis` based queuing system using `Node.js`, `Express` and
+`Kue`. 🛠️
 <br></br>
 
 ## Resources 📚
@@ -71,118 +74,32 @@ $ npm install
 <br></br>
 
 # Tasks 📝
-## Task 0. Install a Redis instance 🛠️
-<i>**Objective**</i>: Set up a Redis server on your local machine.
 
-**Steps**:
-  - ✅ Download, extract, and compile the latest stable Redis version.
-  - ✅ Start Redis in the background.
-  - ✅ Set and get a value using `redis-cli`.
-  - ✅ Copy `dump.rdb` to the project root.
+| Task | Description |
+|------|-------------|
+| **Task 0:** Install a Redis instance 🛠️ | Set up a Redis server on your local machine. |
+| **Task 1:** Node Redis Client 🔗 | Connect to a Redis server using the `node_redis` client. |
+| **Task 2:** Node Redis client and basic operations ⚙️ | Perform basic operations (set/get) with the Redis client. |
+| **Task 3:** Node Redis client and async operations ⏳ | Use async/await with the Redis client for better handling of asynchronous operations. |
+| **Task 4:** Node Redis client and advanced operations 🔄 | Work with hash values in Redis. |
+| **Task 5:** Node Redis client publisher and subscriber 📡 | Implement a publisher and subscriber using Redis. |
+| **Task 6:** Create the Job creator 🛠️ | Create a job using Kue. |
+| **Task 7:** Create the Job processor ⚙️ | Process jobs from the queue using Kue. |
+| **Task 8:** Track progress and errors with Kue: Create the Job creator 📊 | Track job progress and handle errors using Kue. |
+| **Task 9:** Track progress and errors with Kue: Create the Job processor 📈 | Implement a job processor that tracks progress and handles errors. |
+| **Task 10:** Create Push Notifications Jobs 📲 | Create push notification jobs using Kue. |
+| **Task 11:** Test Push Notifications Jobs 🧪 | Write tests for the push notification jobs using Sinon and Chai. |
+| **Task 12:** Stock Management API 📦 | Build an API for managing stock using Express and Redis. |
+| **Task 13:** Seat Reservation System 🪑 | Implement a seat reservation system using Express, Redis, and Kue. |
 
-*Expected Outcome*: You should have a running Redis server and be able to set/get values.
 <br></br>
 
-## Task 1. Node Redis Client 🔗
-<i>**Objective**</i>: Connect to a Redis server using the `node_redis` client.
-
-**Requirements**:
-  - ✅ Install `node_redis`.
-  - ✅ Create a Redis client.
-  - ✅ Log messages when the client connects or encounters an error.
-
-**Expected Outcome**: The client should connect to the Redis server and log appropriate messages.
-<br></br>
-
-## Task 2. Node Redis client and basic operations ⚙️
-<i>**Objective**</i>: Perform basic operations (set/get) with the Redis client.
-
-**Requirements**:
-  - ✅ Create functions to set and get values from Redis.
-  - ✅ Log the values retrieved from Redis.
-
-**Expected Outcome**: You should be able to set and get values from Redis using the client.
-<br></br>
-
-## Task 3. Node Redis client and async operations ⏳
-<i>**Objective**</i>: Use async/await with the Redis client for better handling of asynchronous operations.
-
-**Requirements**:
-  - ✅ Use `promisify` from `util` to convert callback-based Redis methods to promises.
-  - ✅ Create functions to set and get values asynchronously.
-  - ✅ Log the values retrieved from Redis.
-
-**Expected Outcome**: You should be able to perform asynchronous operations with Redis.
-<br></br>
-## Task 4. Node Redis client and advanced operations 🔄
-<i>**Objective**</i>: Work with hash values in Redis.
-
-**Requirements**:
-  - ✅ Create functions to set and get hash values.
-  - ✅ Log the hash values retrieved from Redis.
-
-**Expected Outcome**: You should be able to store and retrieve hash values in Redis.
-<br></br>
-
-## Task 5. Node Redis client publisher and subscriber 📡
-<i>**Objective**</i>: Implement a publisher and subscriber using Redis.
-
-**Requirements**:
-  - ✅ Create a subscriber that listens to a Redis channel.
-  - ✅ Create a publisher that sends messages to the Redis channel.
-  - ✅ Handle special messages like `KILL_SERVER` to stop the subscriber.
-
-**Expected Outcome**: The subscriber should receive and log messages sent by the publisher.
-<br></br>
-
-## Task 6. Create the Job creator 🛠️
-<i>**Objective**</i>: Create a job using Kue.
-
-**Requirements**:
-  - ✅ Create a job queue using Kue.
-  - ✅ Create a job with specific data and save it to the queue.
-  - ✅ Log messages when the job is created, completed, or failed.
-
-**Expected Outcome**: You should be able to create and track the status of a job using Kue.
-<br></br>
-
-## Task 7. Create the Job processor ⚙️
-<i>**Objective**</i>: Process jobs from the queue using Kue.
-
-**Requirements**:
-  - ✅ Create a job processor that handles jobs from the queue.
-  - ✅ Log messages when a job is processed.
-
-**Expected Outcome**: You should be able to process jobs from the queue and log their status.
-<br></br>
-
-## Task 8. Track progress and errors with Kue: Create the Job creator 📊
-<i>**Objective**</i>: Track job progress and handle errors using Kue.
-
-**Requirements**:
-  - ✅ Create multiple jobs with specific data and save them to the queue.
-  - ✅ Track job progress and handle errors.
-  - ✅ Log messages for job creation, completion, failure, and progress.
-
-**Expected Outcome**: You should be able to track job progress and handle errors effectively.
-<br></br>
-
-## Task 9. Track progress and errors with Kue: Create the Job processor 📈
-<i>**Objective**</i>: Implement a job processor that tracks progress and handles errors.
-
-**Requirements**:
-  - ✅ Create a job processor that handles jobs from the queue.
-  - ✅ Track job progress and handle errors.
-  - ✅ Log messages for job processing, progress, and errors.
-
-**Expected Outcome**: You should be able to process jobs, track their progress, and handle errors effectively.
-<br></br>
-
----
 ## Tips 💡
 - Be sure to test each task to verify functionality.
-- For asynchronous operations, handle errors properly to avoid crashing the app.
-- Utilize `kue`'s built-in event listeners (`complete`, `failed`, `progress`) to track the state of jobs.
+- For asynchronous operations, handle errors properly to avoid crashing the
+app.
+- Utilize `kue`'s built-in event listeners (`complete`, `failed`, `progress`)
+to track the state of jobs.
 <br></br>
 
 ---
