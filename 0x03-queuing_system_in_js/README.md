@@ -81,7 +81,7 @@ $ npm install
   - ✅ Copy `dump.rdb` to the project root.
 
 **Expected Outcome**: You should have a running Redis server and be able to set/get values.
-
+<br></br>
 ### Task 1. Node Redis Client 🔗
 **Objective**: Connect to a Redis server using the `node_redis` client.
 
@@ -91,7 +91,7 @@ $ npm install
   - ✅ Log messages when the client connects or encounters an error.
 
 **Expected Outcome**: The client should connect to the Redis server and log appropriate messages.
-
+<br></br>
 ### Task 2. Node Redis client and basic operations ⚙️
 **Objective**: Perform basic operations (set/get) with the Redis client.
 
@@ -100,7 +100,7 @@ $ npm install
   - ✅ Log the values retrieved from Redis.
 
 **Expected Outcome**: You should be able to set and get values from Redis using the client.
-
+<br></br>
 ### Task 3. Node Redis client and async operations ⏳
 **Objective**: Use async/await with the Redis client for better handling of asynchronous operations.
 
@@ -110,7 +110,7 @@ $ npm install
   - ✅ Log the values retrieved from Redis.
 
 **Expected Outcome**: You should be able to perform asynchronous operations with Redis.
-
+<br></br>
 ### Task 4. Node Redis client and advanced operations 🔄
 **Objective**: Work with hash values in Redis.
 
@@ -119,7 +119,7 @@ $ npm install
   - ✅ Log the hash values retrieved from Redis.
 
 **Expected Outcome**: You should be able to store and retrieve hash values in Redis.
-
+<br></br>
 ### Task 5. Node Redis client publisher and subscriber 📡
 **Objective**: Implement a publisher and subscriber using Redis.
 
@@ -129,7 +129,7 @@ $ npm install
   - ✅ Handle special messages like `KILL_SERVER` to stop the subscriber.
 
 **Expected Outcome**: The subscriber should receive and log messages sent by the publisher.
-
+<br></br>
 ### Task 6. Create the Job creator 🛠️
 **Objective**: Create a job using Kue.
 
@@ -139,7 +139,7 @@ $ npm install
   - ✅ Log messages when the job is created, completed, or failed.
 
 **Expected Outcome**: You should be able to create and track the status of a job using Kue.
-
+<br></br>
 ### Task 7. Create the Job processor ⚙️
 **Objective**: Process jobs from the queue using Kue.
 
@@ -148,7 +148,7 @@ $ npm install
   - ✅ Log messages when a job is processed.
 
 **Expected Outcome**: You should be able to process jobs from the queue and log their status.
-
+<br></br>
 ### Task 8. Track progress and errors with Kue: Create the Job creator 📊
 **Objective**: Track job progress and handle errors using Kue.
 
@@ -158,7 +158,7 @@ $ npm install
   - ✅ Log messages for job creation, completion, failure, and progress.
 
 **Expected Outcome**: You should be able to track job progress and handle errors effectively.
-
+<br></br>
 ### Task 9. Track progress and errors with Kue: Create the Job processor 📈
 **Objective**: Implement a job processor that tracks progress and handles errors.
 
